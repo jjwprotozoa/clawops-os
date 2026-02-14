@@ -27,9 +27,8 @@ jobs:
 
       - name: Install gitleaks
         run: |
-          curl -sSL https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks_$(uname -s)_$(uname -m).tar.gz -o gitleaks.tar.gz
-          tar -xzf gitleaks.tar.gz
-          sudo mv gitleaks /usr/local/bin/
+          curl -sSL https://raw.githubusercontent.com/gitleaks/gitleaks/master/scripts/install.sh | sudo bash -s -- -b /usr/local/bin
+          gitleaks version
 
       - name: Run gitleaks
         run: gitleaks detect --source . --config .gitleaks.toml --verbose
