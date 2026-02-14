@@ -1,0 +1,24 @@
+title = "ClawOps gitleaks config"
+
+[allowlist]
+description = "Allow common false positives"
+paths = [
+  '''^\.git/''',
+  '''^node_modules/''',
+  '''^dist/''',
+  '''^build/''',
+  '''^coverage/''',
+  '''^\.next/''',
+  '''^\.turbo/''',
+  '''^\.cache/''',
+  '''^\.venv/''',
+  '''^venv/''',
+]
+regexes = [
+  # allow obviously-non-secret placeholders
+  '''(?i)example[_-]?key''',
+  '''(?i)dummy[_-]?key''',
+  '''(?i)changeme''',
+  '''(?i)placeholder''',
+  '''__REDACTED__''',
+]
