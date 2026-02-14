@@ -1,0 +1,5 @@
+
+# Local-only / runtime
+.pre-commit-config.yaml
+bin/
+memory/
