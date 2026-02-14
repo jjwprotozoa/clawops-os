@@ -55,7 +55,7 @@ disciplined delivery operations.
 - Pipeline/proposal UI and dashboards → Platform Director
 - Cross-org metrics and reporting → Intelligence Director (if enabled)
 - Productization overlap (turning work into SaaS features) → Platform Director
-- Relevant Product Director
+  - relevant Product Director
 
 ## Logging + file locations
 
