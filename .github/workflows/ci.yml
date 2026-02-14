@@ -25,10 +25,7 @@ jobs:
       - name: Run markdownlint
         run: markdownlint .
 
-      - name: Install gitleaks
-        run: |
-          curl -sSL https://raw.githubusercontent.com/gitleaks/gitleaks/master/scripts/install.sh | sudo bash -s -- -b /usr/local/bin
-          gitleaks version
-
       - name: Run gitleaks
-        run: gitleaks detect --source . --config .gitleaks.toml --verbose
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          config: .gitleaks.toml
